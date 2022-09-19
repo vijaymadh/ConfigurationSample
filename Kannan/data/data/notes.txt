@@ -1,0 +1,48 @@
+APP table... 2 methods... add.. remove...
+
+2 script... call add method.. remove method...
+
+OLD
+IN.. DC1.. JC1... 
+APP1,APP2,APP4
+
+
+NEW
+IN... DC2...JC2...
+APP3,APP4
+
+CURRENT CODE:
+ADD FN: APP3, APP4
+REMOVE FN: APP1,APP2,APP4
+
+NEW CODE:
+ADD FN: APP3
+REMOVE FN: APP1, APP2
+EXISTING: APP4
+
+
+
+New and old values...
+- for the add script, before adding.. check the table to see if there already an entry for the app..
+
+- for remove script, before removing, check the table to see if there already an entry for the app..
+APP1 APP2 APP3...
+
+App table... userid... appid..orderstate=assigned
+
+
+
+
+country... dept.. jobcode...
+country... dept..
+country... jobcode...
+jobcode...dept.. 
+country... 
+dept.. 
+jobcode...
+
+
+
+
+
+

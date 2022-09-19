@@ -1,0 +1,24 @@
+﻿UID_CCC_Access,XDateInserted,XDateUpdated,XUserInserted,XUserUpdated,XTouched,XObjectKey,XMarkedForDeletion,CCC_Category,CCC_Country,CCC_DepartmentCode,CCC_DisplayName,CCC_JobCode,CCC_SubCategory,CCC_Value,CCC_Access
+1a031954-a78a-449d-9ccc-ef1c0f87434d,02-12-20 16:49,02-12-20 16:49,viadmin,viadmin,,<Key><T>CCC_Access</T><P>1a031954-a78a-449d-9ccc-ef1c0f87434d</P></Key>,0,App1,IN,DC2,DN,JC1,LoginID,centralaccount,RBAC
+25ff5346-360c-4789-8817-678d3121fac0,02-12-20 10:27,02-12-20 10:27,viadmin,viadmin,,<Key><T>CCC_Access</T><P>25ff5346-360c-4789-8817-678d3121fac0</P></Key>,0,App1,IN,DC2,DN,JC1,entity,Accounts,RBAC
+2e8db764-7a14-409c-9cd1-047dcc2f7b15,02-12-20 10:27,02-12-20 10:27,viadmin,viadmin,,<Key><T>CCC_Access</T><P>2e8db764-7a14-409c-9cd1-047dcc2f7b15</P></Key>,0,App1,IN,DC2,DN,JC1,Job,Support,RBAC
+8fac5315-1205-47f6-a28d-2fcf81c7fb4e,02-12-20 10:26,02-12-20 10:26,viadmin,viadmin,,<Key><T>CCC_Access</T><P>8fac5315-1205-47f6-a28d-2fcf81c7fb4e</P></Key>,0,App1,IN,DC2,DN,JC1,Country,IN,RBAC
+b38d1757-e22d-4358-ac6a-9078f70c2867,02-12-20 10:28,02-12-20 10:28,viadmin,viadmin,,<Key><T>CCC_Access</T><P>b38d1757-e22d-4358-ac6a-9078f70c2867</P></Key>,0,App1,IN,DC2,DN,JC1,uidOrg,66E1779F-B18B-4DC9-87FE-FDA8F1C9364A,RBAC
+eb302850-7536-4b1f-b2f6-f6410bc455ed,02-12-20 16:52,02-12-20 16:52,viadmin,viadmin,,<Key><T>CCC_Access</T><P>eb302850-7536-4b1f-b2f6-f6410bc455ed</P></Key>,0,App1,IN,DC2,DN,JC1,approle,App1KMDFD,RBAC
+463bf315-9236-46a5-bd01-db2de169772d,02-12-20 16:53,02-12-20 16:55,viadmin,viadmin,,<Key><T>CCC_Access</T><P>463bf315-9236-46a5-bd01-db2de169772d</P></Key>,0,App2,IN,DC1,DS,JC2,approle,APP2KGEDS,RBAC
+666a6a42-f724-4820-8963-845cb44fcb70,02-12-20 10:32,02-12-20 10:32,viadmin,viadmin,,<Key><T>CCC_Access</T><P>666a6a42-f724-4820-8963-845cb44fcb70</P></Key>,0,App2,IN,DC1,DS,JC2,Job,Admin,RBAC
+af167362-e7c1-4be1-9239-86bf002cbe6b,02-12-20 10:34,02-12-20 10:34,viadmin,viadmin,,<Key><T>CCC_Access</T><P>af167362-e7c1-4be1-9239-86bf002cbe6b</P></Key>,0,App2,IN,DC1,DS,JC2,uidOrg,318B8F72-F9DC-469E-BA82-7103A02B8984,RBAC
+b0b2e7f4-1cca-4e2e-be86-87b7532d9d65,02-12-20 10:31,02-12-20 10:31,viadmin,viadmin,,<Key><T>CCC_Access</T><P>b0b2e7f4-1cca-4e2e-be86-87b7532d9d65</P></Key>,0,App2,IN,DC1,DS,JC2,entity,Finance,RBAC
+0d395c22-fb4a-4be2-8000-f1079a764465,02-12-20 16:51,02-12-20 16:51,viadmin,viadmin,,<Key><T>CCC_Access</T><P>0d395c22-fb4a-4be2-8000-f1079a764465</P></Key>,0,App2,IN,DC1,DS,JC2,ID,centralaccount,RBAC
+11cb7a0b-0e3f-45f0-85d1-2a012ae75f03,02-12-20 16:52,02-12-20 16:55,viadmin,viadmin,,<Key><T>CCC_Access</T><P>11cb7a0b-0e3f-45f0-85d1-2a012ae75f03</P></Key>,0,App2,IN,DC1,DS,JC2,approle,App2NDF,RBAC
+184fd654-3f0e-4daa-89c8-4f94471559d8,02-12-20 10:30,02-12-20 10:30,viadmin,viadmin,,<Key><T>CCC_Access</T><P>184fd654-3f0e-4daa-89c8-4f94471559d8</P></Key>,0,App2,IN,DC1,DS,JC2,Country,USA,RBAC
+0f1d40b9-6fa6-43b6-b1a8-e6ae4a24d7ef,06-12-20 19:11,06-12-20 19:11,viadmin,viadmin,,<Key><T>CCC_Access</T><P>0f1d40b9-6fa6-43b6-b1a8-e6ae4a24d7ef</P></Key>,0,App3,US,DC1,DS,JC3,uidOrg,436FB104-5C5E-48BF-8B2F-E74FE43BB5E5,RBAC
+45fda5d2-c7d9-4d96-bc4f-8118e4632b86,06-12-20 19:19,06-12-20 19:19,viadmin,viadmin,,<Key><T>CCC_Access</T><P>45fda5d2-c7d9-4d96-bc4f-8118e4632b86</P></Key>,0,App3,US,DC1,DS,JC3,Job,Admin,RBAC
+1c8505bc-2391-4f41-96cb-7e1bf4bc798a,06-12-20 19:19,07-12-20 14:16,viadmin,viadmin,,<Key><T>CCC_Access</T><P>1c8505bc-2391-4f41-96cb-7e1bf4bc798a</P></Key>,0,App3,US,DC1,DS,JC3,Roles,APP3KGDS,RBAC
+25c3a81e-5210-4d75-9904-c2b5ae885a34,06-12-20 19:19,06-12-20 19:19,viadmin,viadmin,,<Key><T>CCC_Access</T><P>25c3a81e-5210-4d75-9904-c2b5ae885a34</P></Key>,0,App3,US,DC1,DS,JC3,ID,centralaccount,RBAC
+816fbad4-1c4e-4dd4-99b8-44bf4fa96563,06-12-20 19:19,06-12-20 19:19,viadmin,viadmin,,<Key><T>CCC_Access</T><P>816fbad4-1c4e-4dd4-99b8-44bf4fa96563</P></Key>,0,App3,US,DC1,DS,JC3,Country,USA,RBAC
+92d8877e-5f5f-4300-b50b-6446cb6d67c5,06-12-20 19:19,07-12-20 14:17,viadmin,viadmin,,<Key><T>CCC_Access</T><P>92d8877e-5f5f-4300-b50b-6446cb6d67c5</P></Key>,0,App3,US,DC1,DS,JC3,Roles,App3NDF,RBAC
+9e3eaf2f-257a-4afc-8d48-a1ceeba8e3e8,07-12-20 11:17,07-12-20 11:17,viadmin,viadmin,,<Key><T>CCC_Access</T><P>9e3eaf2f-257a-4afc-8d48-a1ceeba8e3e8</P></Key>,0,App3,US,DC1,DC,JC3,entity,Admin,RBAC
+a759d354-f3a9-4fff-9955-526eeca9f62e,06-12-20 19:19,07-12-20 14:17,viadmin,viadmin,,<Key><T>CCC_Access</T><P>a759d354-f3a9-4fff-9955-526eeca9f62e</P></Key>,0,App3,US,DC1,DS,JC3,Roles,APP3KGEDS,RBAC
+be71356f-ecae-4b61-abc4-ae57eaa1af77,06-12-20 19:19,06-12-20 19:19,viadmin,viadmin,,<Key><T>CCC_Access</T><P>be71356f-ecae-4b61-abc4-ae57eaa1af77</P></Key>,0,App3,US,DC1,DS,JC3,entity,Finance,RBAC
+edefe113-e820-4c97-aa84-95cd0aa8a650,11-12-20 16:28,11-12-20 16:31,viadmin,viadmin,,<Key><T>CCC_Access</T><P>edefe113-e820-4c97-aa84-95cd0aa8a650</P></Key>,0,App4,IN,DC2,DN,JC1,uidOrg,F64018DE-319E-4A36-8A21-CDBBE5A0AB82,RBAC

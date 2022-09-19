@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = timeout_exclusive
+build_property.ProjectDir = C:\TFS\gitConfig\vijaymadh\ConfigurationSample\Asynchronus In C#\chapter-3\code\timeout-exclusive\

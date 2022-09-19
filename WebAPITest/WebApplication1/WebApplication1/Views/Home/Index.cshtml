@@ -1,0 +1,68 @@
+﻿<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
+            a broad range of clients, including browsers and mobile devices. ASP.NET Web API
+            is an ideal platform for building RESTful applications on the .NET Framework.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+
+<input id="in_array" value="H, e, l, l, o, , W, o, r, l, d, !" />
+
+<br /><br />
+
+<button id="reverse_array">Reverse Array</button>
+
+<br /><br />
+
+<input id="out_array" disabled />
+
+@section scripts {
+    <script>
+        $('#reverse_array').click(() => {
+            let arr = $('#in_array').val();
+            @*var url = 'api'+'@Url.Action("reverse_string_get", "Array")';*@
+               var url = 'api'+'@Url.Action("Get", "Array")';
+            var cars = new Array();
+            cars.push("Saab");
+            cars.push("Volvo");
+            cars.push("BMW");
+            $.ajax({
+                url: url,
+                dataType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                //type: "post",
+                crossDomain: true,
+                headers: {
+                    Accept: "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+                    "Access-Control-Allow-Headers": "Content-Type, Accept",
+                    "Access-Control-Max-Age": "30",
+                },
+
+            }).done(function (retArr) {
+                $('#out_array').val(retArr);
+                });
+            // Can use js here or send the array to MVC API and do it there - either is fine
+        });
+    </script>
+}

@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EB7934C-3A16-48FE-83AD-316E8EFA7872}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConfigurationValidation</RootNamespace>
+    <AssemblyName>Configuration Validation</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Config Comp.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Pdf, Version=17.2.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>packages\Aspose.Pdf.17.2.0\lib\net40-client\Aspose.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=19.5.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="Icertis.ACF.Helpers.Core">
+      <HintPath>Library\Icertis.ACF.Helpers.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Icertis.CLM.API.Common">
+      <HintPath>Library\Icertis.CLM.API.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Icertis.CLM.APIClient">
+      <HintPath>Library\Icertis.CLM.APIClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Icertis.CLM.APIUtils">
+      <HintPath>Library\Icertis.CLM.APIUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Icertis.CLM.Masters">
+      <HintPath>Library\Icertis.CLM.Masters.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Azure.KeyVault.3.0.0-alpha\lib\net452\Microsoft.Azure.KeyVault.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Azure.KeyVault.Core.3.0.0-alpha\lib\net452\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.WebKey, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Azure.KeyVault.WebKey.3.0.0-alpha\lib\net452\Microsoft.Azure.KeyVault.WebKey.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=3.19.4.11002, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.19.4\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.19.4.11002, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.19.4\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Rest.ClientRuntime.2.3.11\lib\net452\Microsoft.Rest.ClientRuntime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime.Azure, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Rest.ClientRuntime.Azure.3.3.10\lib\net452\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adobe\CancelEnvelope.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adobe\CancelEnvelope.Designer.cs">
+      <DependentUpon>CancelEnvelope.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adobe\CSV\CheckEsignEnvelopeMultipleCSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adobe\CSV\CheckEsignEnvelopeMultipleCSV.Designer.cs">
+      <DependentUpon>CheckEsignEnvelopeMultipleCSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adobe\CheckEsignEnvelopeMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adobe\CheckEsignEnvelopeMultiple.Designer.cs">
+      <DependentUpon>CheckEsignEnvelopeMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adobe\CheckEsignEnvelope.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adobe\CheckEsignEnvelope.Designer.cs">
+      <DependentUpon>CheckEsignEnvelope.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adobe\Daimer\EnvelopeInfo.cs" />
+    <Compile Include="Adobe\Daimer\GetAllAgreementInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adobe\Daimer\GetAllAgreementInfo.Designer.cs">
+      <DependentUpon>GetAllAgreementInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adobe\Daimer\AgreementInfo.cs" />
+    <Compile Include="Adobe\EsignCommon.cs" />
+    <Compile Include="Adobe\CSV\TempCSV.cs" />
+    <Compile Include="AKVHelper\AKVSecretInfo.cs" />
+    <Compile Include="AKVHelper\AzureKeyVaultHelper.cs" />
+    <Compile Include="AsposePDF\TextReplacement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsposePDF\TextReplacement.Designer.cs">
+      <DependentUpon>TextReplacement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsposePDF\WordToPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsposePDF\WordToPDF.Designer.cs">
+      <DependentUpon>WordToPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Configuration.cs" />
+    <Compile Include="CompareFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompareFiles.Designer.cs">
+      <DependentUpon>CompareFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adobe\EchoSignOauthGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adobe\EchoSignOauthGenerator.Designer.cs">
+      <DependentUpon>EchoSignOauthGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interview\QuestionAndAnswers.cs" />
+    <Compile Include="Interview\FindQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interview\FindQuestion.Designer.cs">
+      <DependentUpon>FindQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interview\QuestionPoper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interview\QuestionPoper.Designer.cs">
+      <DependentUpon>QuestionPoper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JSONReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JSONReader.Designer.cs">
+      <DependentUpon>JSONReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Sealed Method Example.cs" />
+    <Compile Include="RetryMechanism\FunctionWithRetry.cs" />
+    <Compile Include="RetryMechanism\RetryHandler.cs" />
+    <Compile Include="RetryMechanism\RetryStrategy.cs" />
+    <Compile Include="RetryMechanism\RetryTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetryMechanism\RetryTest.Designer.cs">
+      <DependentUpon>RetryTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadXmlDocumenation\Models\Member.cs" />
+    <Compile Include="ReadXmlDocumenation\ReadXmlDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadXmlDocumenation\ReadXmlDocument.Designer.cs">
+      <DependentUpon>ReadXmlDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adobe\SendEsignDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adobe\SendEsignDocument.Designer.cs">
+      <DependentUpon>SendEsignDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TenantConfig\CompareTenantConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TenantConfig\CompareTenantConfig.Designer.cs">
+      <DependentUpon>CompareTenantConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TenantConfig\ReadTenantConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TenantConfig\ReadTenantConfig.Designer.cs">
+      <DependentUpon>ReadTenantConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StopWatchTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StopWatchTest.Designer.cs">
+      <DependentUpon>StopWatchTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TenantConfig\Models\Config.cs" />
+    <Compile Include="TenantConfig\Models\ConfigModel.cs" />
+    <Compile Include="TenantConfig\Models\Data.cs" />
+    <Compile Include="TenantConfig\Models\Tenant.cs" />
+    <Compile Include="TenantConfig\Models\TenantEntity.cs" />
+    <Compile Include="TenantConfig\Models\TenantInfo.cs" />
+    <Compile Include="TenantConfig\Models\tenantPropertyGroup.cs" />
+    <Compile Include="Adobe\TestAKV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adobe\TestAKV.Designer.cs">
+      <DependentUpon>TestAKV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Adobe\CancelEnvelope.resx">
+      <DependentUpon>CancelEnvelope.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adobe\CSV\CheckEsignEnvelopeMultipleCSV.resx">
+      <DependentUpon>CheckEsignEnvelopeMultipleCSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adobe\CheckEsignEnvelopeMultiple.resx">
+      <DependentUpon>CheckEsignEnvelopeMultiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adobe\CheckEsignEnvelope.resx">
+      <DependentUpon>CheckEsignEnvelope.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adobe\Daimer\GetAllAgreementInfo.resx">
+      <DependentUpon>GetAllAgreementInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsposePDF\TextReplacement.resx">
+      <DependentUpon>TextReplacement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsposePDF\WordToPDF.resx">
+      <DependentUpon>WordToPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompareFiles.resx">
+      <DependentUpon>CompareFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adobe\EchoSignOauthGenerator.resx">
+      <DependentUpon>EchoSignOauthGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interview\FindQuestion.resx">
+      <DependentUpon>FindQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interview\QuestionPoper.resx">
+      <DependentUpon>QuestionPoper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JSONReader.resx">
+      <DependentUpon>JSONReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetryMechanism\RetryTest.resx">
+      <DependentUpon>RetryTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReadXmlDocumenation\ReadXmlDocument.resx">
+      <DependentUpon>ReadXmlDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adobe\SendEsignDocument.resx">
+      <DependentUpon>SendEsignDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenantConfig\CompareTenantConfig.resx">
+      <DependentUpon>CompareTenantConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenantConfig\ReadTenantConfig.resx">
+      <DependentUpon>ReadTenantConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StopWatchTest.resx">
+      <DependentUpon>StopWatchTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adobe\TestAKV.resx">
+      <DependentUpon>TestAKV.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DocuSign\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="EchosignRESTClient\EchosignRESTClient.csproj">
+      <Project>{dfc43af1-4f40-4683-b390-7cf9e8413f96}</Project>
+      <Name>EchosignRESTClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config Comp.ico" />
+    <Content Include="Icon\Config Comp.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = threadpool
+build_property.ProjectDir = C:\TFS\gitConfig\vijaymadh\ConfigurationSample\Asynchronus In C#\thread-code\code\threadpool\

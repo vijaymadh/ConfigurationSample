@@ -1,0 +1,28 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="content/kendo/kendo.common.min.css" />
+    <!--<link rel="stylesheet" href="styles/kendo.[SELECT A THEME].min.css" />-->
+    <!-- e.g. metro is a theme here -->
+    <link rel="stylesheet" href="content/kendo/kendo.metro.min.css" />
+</head>
+
+<body>
+    <!-- place associating kendo HTML here, before scripts below-->
+     <input id="datepicker" value="10/10/2011" style="width:150px;" />
+
+    <!-- load jQuery before Kendo UI -->
+    <script src="scripts/kendo/jquery.min.js"></script>
+
+    <!-- load Kendo UI after the browser has loaded and parsed jQuery -->
+    <script src="scripts/kendo/kendo.web.min.js"></script>
+
+    <!-- run kendo HTML here, after scripts above -->
+    <script>
+        $('#datepicker').kendoDatePicker();
+    </script>
+</body>
+</html>

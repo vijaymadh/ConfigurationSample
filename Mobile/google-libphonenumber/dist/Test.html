@@ -1,0 +1,18 @@
+<script src="libphonenumber.js" type="text/javascript"></script>
+<input type="text" id="phoneNumber" value="202-456-1414" />
+<input type="button" onclick="test()" value="202-456-1414" />
+<select id=""></select>
+<a href="tel:1800-MICROSOFT">call</a>
+<script type="text/javascript">
+    function test() {
+        const phoneUtil = libphonenumber.PhoneNumberUtil.getInstance();
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        phoneUtil.getRegionCodeForNumber
+        var countryCodes = libphonenumber.shortnumbermetadata.countryCodeToRegionCodeMap;
+        for (i = 0; i <= countryCodes[0].length; i++) {
+            console.log(countryCodes[0][i] + "   ");
+        }
+
+       alert(number);
+    }
+</script>

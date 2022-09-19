@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="content/kendo/kendo.common.min.css" />
+    <link rel="stylesheet" href="content/kendo/kendo.metro.min.css" />
+    <!--<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.2.504/styles/kendo.default.min.css" />-->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <textarea id="autocomplete-textarea" rows="10" cols="30" class="form-control" rows="5"></textarea>
+    <!--<input id="autocomplete" style="width: auto; border: none" />-->
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.textcomplete/1.8.0/jquery.textcomplete.js"></script>-->
+    <script src="scripts/kendo/kendo.web.min.js"></script>
+    <!--<script src="scripts/myscript.js"></script>-->
+
+</body>
+</html>
+<script>
+    //$('textarea').textcomplete([{
+    //    id:'names',
+    //    match: /(^|\@)(\w{1,})$/,
+    //    search: function (term, callback) {
+    //        var words = ['google', 'facebook', 'github', 'microsoft', 'yahoo'];
+    //        callback($.map(words, function (word) {
+    //            return word.indexOf(term) === 0 ? word : null;
+    //        }));
+    //    },
+    //    replace: function (word) {
+    //        return word + ' ';
+    //    }
+    //}])
+
+    $('#autocomplete-textarea').textcomplete([
+       //{ // emoji strategy
+       //    id: 'emoji',
+       //    match: /\B:([\-+\w]*)$/,
+       //    search: function (term, callback) {
+       //        callback($.map(people, function (person) {
+       //            return person.indexOf(term) === 0 ? person : null;
+       //        }));
+       //    },
+       //    template: function (name) {
+       //        return  name 
+       //    },
+       //    replace: function (name) {
+       //        return ':' + name + ': ';
+       //    },
+       //    index: 1
+       //},
+       { // tech companies
+           id: 'tech-companies',
+           words: ['apple', 'google', 'facebook', 'github'],
+           match: /\B@([\-+\w]*)$/,
+           search: function (term, callback) {
+               callback($.map(this.words, function (word) {
+                   return word.indexOf(term) === 0 ? word : null;
+               }));
+           },
+           index: 1,
+           replace: function (word) {
+               return word + ' ';
+           }
+       }
+    ], {
+        onKeydown: function (e, commands) {
+            if (e.ctrlKey && e.keyCode === 74) { // CTRL-J
+                return commands.KEY_ENTER;
+            }
+        }
+    });
+
+    //    .overlay([
+    //{
+    //    match: /\B@\w+/g,
+    //    css: {
+    //        'background-color': '#d8dfea'
+    //    }
+    //}
+    //]);
+
+    var people = [
+        {name:"vijay", Age:23}
+        , { name: "Laxman", age: 33 }];
+</script>

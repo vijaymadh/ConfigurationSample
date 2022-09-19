@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.318/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.318/styles/kendo.default.min.css" />
+</head>
+
+<body>
+    <input id="animal" placeholder="start typing e.g. 'a'" />
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2015.1.318/js/kendo.all.min.js"></script>
+
+    <script>
+      $("#animal").kendoAutoComplete({
+          dataSource: [ "Ant", "Antilope", "Badger", "Beaver", "Bird" ]
+      });
+    </script>
+</body>
+</html>
